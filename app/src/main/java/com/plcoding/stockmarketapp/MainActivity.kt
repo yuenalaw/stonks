@@ -11,7 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.plcoding.stockmarketapp.ui.theme.StockMarketAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint //allows us to inject things into components, through dagger hilt
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

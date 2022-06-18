@@ -18,9 +18,9 @@ import javax.inject.Singleton
 //we want to depend on ABSTRACTIONS (like abstract classes or interfaces)
 @Singleton //make sure only one instance in whole app
 class StockRepositoryImpl @Inject constructor(
-    val api: StockApi,
-    val db: StockDatabase,
-    val companyListingsParser: CSVParser<CompanyListing>
+    private val api: StockApi,
+    private val db: StockDatabase,
+    private val companyListingsParser: CSVParser<CompanyListing>
 ): StockRepository{
 
     private val dao = db.dao
